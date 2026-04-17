@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading - My hobby 📚</title>
+    <style>
+      body {
+        background: linear-gradient(360deg, rgb(17, 151, 147) 11.2%, rgb(154, 214, 212) 55.4%, rgb(255, 233, 171) 100.2%);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid #9dd6d2;
+        background: white;
+        font-size: 24px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+
+      button:hover {
+        background: #9dd6d2;
+        cursor: pointer;
+      }
+
+      footer {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 18px;
+      }
+
+      .container {
+        margin: 0 auto;
+        max-width: 600px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .theme-button {
+        font-size: 10px;
+        background: black;
+        color: white;
+        padding: 5 8px;
+      }
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+
+      .inheritance-games {
+        border-radius: 10px;
+        filter: contrast(80%);
+        transform: scale(1.1);
+        padding: 5px 5px;
+      }
+
+      .inheritance-games, 
+      .shatter-me,
+      .one-of-us-is-back,
+      .six-of-crows,
+      .twisted-lies {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+        display: block;
+        margin: 0 auto;
+        padding: 5px 5px;
+      }
+
+      .inheritance-games:hover {
+        filter: contrast(50%);
+        transform: scale(1.2);
+      }
+
+      .shatter-me:hover {
+        filter: contrast(50%);
+        transform: scale(1.2);
+      }
+
+      .one-of-us-is-back:hover {
+        filter: contrast(50%);
+        transform: scale(1.2);
+      }
+
+      .six-of-crows:hover {
+        filter: contrast(50%);
+        transform: scale(1.2);
+      }
+
+      .twisted-lies:hover {
+        filter: contrast(50%);
+        transform: scale(1.2);
+      }
+
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .dark {
+        background: black;
+        color: white;
+      }
+
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1)
+      }
+
+      .dark a {
+        color: plum;
+      }
+
+    </style>
+  </head>
+  <body class="dark">
+    <button class="theme-button">Change Theme</button>
+    <div class="container">
+      <h1>📚 Reading 📚</h1>
+      <h2>My favourite hobby</h2>
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Reading" target="_blank">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/488/original/download.jpg?1735204718"
+            class="inheritance-games"
+        /></a>
+        <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/489/original/download-1.jpg?1735204803"
+          class="shatter-me"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/526/original/download.jpg?1735287793"
+          class="one-of-us-is-back"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/492/original/download.jpg?1735205358"
+          class="six-of-crows"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/493/original/download.jpg?1735205680"
+          class="twisted-lies"
+        />
+        </div>
+        As a leisure activity, people of all ages read because it is enjoyable
+        and interesting. In the US, about half of all adults read one or more
+        books for pleasure each year. About 5% read more than 50 books per year.
+        Americans read more if they: have more education, read fluently and
+        easily, are female, live in cities, and have higher socioeconomic
+        status. Children become better readers when they know more about the
+        world in general, and when they perceive reading as fun rather than as a
+        chore to be performed.
+      </p>
+      <button class="book-button">I WANT TO READ BOOKS</button>
+    </div>
+    <footer>
+      Coded by <a href="https://www.shecodes.io" target="_blank">Saadia Ali</a>
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+body.classList.toggle("dark"); 
+
+     //   if (body.classList.contains("dark")) {
+    //    body.classList.remove("dark");
+   //   } else {
+  //      body.classList.add("dark");
+ //     }
+    }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+      function contact() {
+      let name = prompt("What is your name?");
+      let books = prompt("What genre of books do you want to read?");
+      let email = prompt("What is your email?");
+
+      alert("Thank you " + name + ", we'll be in touch about the " + books + " genre soon!");
+     }
+
+     let bookButton = document.querySelector(".book-button");
+      bookButton.addEventListener("click", contact);
+      
+    </script>
+  </body>
+</html>
